@@ -45,10 +45,16 @@ class ChatScreen extends Component {
     );
   }
 
+  goBack() {
+    this.props.navigator.pop({ animated: true });
+  }
+
   render() {
     return (
       <Screen>
         <NavigationBar
+          hasHistory
+          navigateBack={() => this.goBack()}
           centerComponent={<Title>CHAT WINDOW</Title>}
         />
         <View style={styles.container}>
