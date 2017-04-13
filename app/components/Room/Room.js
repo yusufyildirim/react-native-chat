@@ -34,11 +34,17 @@ class Room extends Component {
 }
 
 Room.propTypes = {
-  // testProp: PropTypes.string,
+  avatar: PropTypes.string,
+  name: PropTypes.string.isRequired,
+  lastMessage: PropTypes.string.isRequired,
+  lastMessageTime: PropTypes.string.isRequired,
 };
 
 Room.defaultProps = {
-  // testProp: '',
+  avatar: 'https://cdn.pixabay.com/photo/2016/08/20/05/38/avatar-1606916_960_720.png',
+  // name: '-',
+  // lastMessage: '',
+  // lastMessageTime: 'UNKNOWN'
 };
 
 module.exports = Room;
