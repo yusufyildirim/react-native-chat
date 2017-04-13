@@ -14,16 +14,16 @@ class Room extends Component {
           <View styleName="notification-dot" />
           <Image
             style={styles.avatar}
-            source={{ uri: 'https://cdn.pixabay.com/photo/2016/08/20/05/38/avatar-1606916_960_720.png' }}
+            source={{ uri: this.props.avatar }}
           />
           <View styleName="horizontal space-between">
             <View styleName="flexible vertical space-between">
-              <Subtitle numberOfLines={1}>Foo Room</Subtitle>
-              <Text numberOfLines={1}>Test Message bla bla bla aıoshdıo ashdoı asdoı</Text>
+              <Subtitle numberOfLines={1}>{this.props.name}</Subtitle>
+              <Text numberOfLines={1}>{this.props.lastMessage}</Text>
             </View>
 
             <View>
-              <Caption>20:21</Caption>
+              <Caption>{this.props.lastMessageTime}</Caption>
             </View>
           </View>
         </Row>
