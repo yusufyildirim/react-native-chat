@@ -4,7 +4,7 @@ const styles = {
   bubbleStyle: {
     paddingHorizontal: 20,
     paddingVertical: 10,
-    marginBottom: 10,
+    marginTop: 10,
     marginHorizontal: 10,
     borderRadius: 20,
   },
