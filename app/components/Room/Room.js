@@ -11,7 +11,7 @@ class Room extends Component {
     return (
       <View style={styles.container}>
         <Row>
-          <View styleName="notification-dot" />
+          {this.props.unreadMessages ? <View styleName="notification-dot" /> : null}
           <Image
             style={styles.avatar}
             source={{ uri: this.props.avatar }}
@@ -34,6 +34,7 @@ class Room extends Component {
 }
 
 Room.propTypes = {
+  unreadMessages: PropTypes.bool,
   avatar: PropTypes.string,
   name: PropTypes.string.isRequired,
   lastMessage: PropTypes.string.isRequired,
@@ -41,6 +42,7 @@ Room.propTypes = {
 };
 
 Room.defaultProps = {
+  unreadMessages: false,
   avatar: 'https://cdn.pixabay.com/photo/2016/08/20/05/38/avatar-1606916_960_720.png',
   // name: '-',
   // lastMessage: '',
