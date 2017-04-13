@@ -1,9 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 
-import { View, Image, Text } from 'react-native';
+import { View } from 'react-native';
 import { Screen, Title, NavigationBar, ListView } from '@shoutem/ui';
 import { Room } from 'components';
-import { images } from 'resources';
 import styles from './styles';
 
 class HomeScreen extends Component {

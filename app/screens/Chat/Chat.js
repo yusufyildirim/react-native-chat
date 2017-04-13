@@ -35,6 +35,10 @@ class ChatScreen extends Component {
     };
   }
 
+  goBack() {
+    this.props.navigator.pop({ animated: true });
+  }
+
   renderRow(message) {
     return (
       <ChatBubble
@@ -43,10 +47,6 @@ class ChatScreen extends Component {
         messageDirection={message.direction}
       />
     );
-  }
-
-  goBack() {
-    this.props.navigator.pop({ animated: true });
   }
 
   render() {
