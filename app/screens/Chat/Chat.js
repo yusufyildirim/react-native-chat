@@ -57,9 +57,9 @@ class ChatScreen extends Component {
             renderRow={this.renderRow}
           />
 
-          <View styleName="horizontal">
+          <View styleName="horizontal" style={styles.textInputContainer}>
             <TextInput
-              style={{ height: this.state.height, flex: 1 }}
+              style={{ ...styles.textInput, height: this.state.height }}
               onContentSizeChange={(event) => {
                 this.setState({
                   height: event.nativeEvent.contentSize.height,
