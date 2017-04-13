@@ -79,6 +79,7 @@ class ChatScreen extends Component {
                   height: event.nativeEvent.contentSize.height,
                 });
               }}
+              placeholder="Type a message"
               multiline
             />
             <TouchableOpacity styleName="clear" >
