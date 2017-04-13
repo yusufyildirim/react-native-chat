@@ -55,12 +55,12 @@ class ChatScreen extends Component {
         <NavigationBar
           hasHistory
           navigateBack={() => this.goBack()}
-          centerComponent={<Title>CHAT WINDOW</Title>}
+          centerComponent={<Title>{this.props.name}</Title>}
           rightComponent={(
             <View styleName="sm-gutter">
               <Image
                 styleName="small-avatar"
-                source={{ uri: 'https://api.adorable.io/avatars/100/jonas.png' }}
+                source={{ uri: this.props.avatar }}
               />
             </View>
           )}
