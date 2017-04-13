@@ -37,9 +37,20 @@ class HomeScreen extends Component {
     };
   }
 
+  goToChat(room) {
+    this.props.navigator.push({
+      screen: 'ChatScreen',
+      passProps: {
+        avatar: room.avatar,
+        name: room.name,
+      },
+    });
+  }
+
   renderRow(room) {
     return (
       <Room
+        onPress={() => this.goToChat(room)}
         unreadMessages={room.unreadMessages}
         avatar={room.avatar}
         name={room.name}
