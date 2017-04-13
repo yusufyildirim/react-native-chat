@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { Screen, Title, NavigationBar, ListView, TextInput, TouchableOpacity, Icon, View } from '@shoutem/ui';
+import { Screen, Title, NavigationBar, ListView, TextInput, TouchableOpacity, Icon, View, Image } from '@shoutem/ui';
 import { ChatBubble } from 'components';
 import styles from './styles';
 
@@ -56,6 +56,14 @@ class ChatScreen extends Component {
           hasHistory
           navigateBack={() => this.goBack()}
           centerComponent={<Title>CHAT WINDOW</Title>}
+          rightComponent={(
+            <View styleName="sm-gutter">
+              <Image
+                styleName="small-avatar"
+                source={{ uri: 'https://api.adorable.io/avatars/100/jonas.png' }}
+              />
+            </View>
+          )}
         />
         <View style={styles.container}>
           <ListView
