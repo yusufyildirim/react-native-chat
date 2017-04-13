@@ -59,6 +59,24 @@ class ChatScreen extends Component {
             data={this.state.messages}
             renderRow={this.renderRow}
           />
+
+          <View styleName="horizontal">
+            <TextInput
+              style={{ height: this.state.height, flex: 1 }}
+              onContentSizeChange={(event) => {
+                this.setState({
+                  height: event.nativeEvent.contentSize.height,
+                });
+              }}
+              multiline
+            />
+
+            <View styleName="md-gutter">
+              <TouchableOpacity styleName="clear">
+                <Icon name="comment" />
+              </TouchableOpacity>
+            </View>
+          </View>
         </View>
       </Screen>
     );
