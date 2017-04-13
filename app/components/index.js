@@ -1,7 +1,7 @@
-// import TestComponent from './TestComponent';
+import Room from './Room';
 
 const components = {
-  // TestComponent,
+  Room,
 };
 
 module.exports = components;
