@@ -1,9 +1,6 @@
 import React, { Component, PropTypes } from 'react';
-
-import { View, Image, Text } from 'react-native';
-import { Screen, Title, NavigationBar, ListView } from '@shoutem/ui';
+import { Screen, Title, NavigationBar, ListView, TextInput, TouchableOpacity, Icon, View } from '@shoutem/ui';
 import { ChatBubble } from 'components';
-import { images } from 'resources';
 import styles from './styles';
 
 class ChatScreen extends Component {
