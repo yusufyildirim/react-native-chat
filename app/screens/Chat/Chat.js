@@ -67,12 +67,11 @@ class ChatScreen extends Component {
               }}
               multiline
             />
-
-            <View styleName="md-gutter">
-              <TouchableOpacity styleName="clear">
-                <Icon name="comment" />
-              </TouchableOpacity>
-            </View>
+            <TouchableOpacity styleName="clear" >
+              <View style={styles.sendButton}>
+                <Icon name="comment" style={styles.buttonIcon} />
+              </View>
+            </TouchableOpacity>
           </View>
         </View>
       </Screen>
