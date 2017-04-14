@@ -1,7 +1,7 @@
-// import TestLib from './TestLib';
+import Socket from './Socket';
 
 const libs = {
-  // TestLib,
+  Socket,
 };
 
 module.exports = libs;
