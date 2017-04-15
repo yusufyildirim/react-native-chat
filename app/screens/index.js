@@ -5,8 +5,8 @@ import NicknameScreen from './Nickname';
 import ChatScreen from './Chat';
 
 // register all screens of the app (including internal ones)
-export default function registerScreens() {
-  Navigation.registerComponent('NicknameScreen', () => NicknameScreen);
+export default function registerScreens(store, Provider) {
+  Navigation.registerComponent('NicknameScreen', () => NicknameScreen, store, Provider);
   Navigation.registerComponent('HomeScreen', () => HomeScreen);
   Navigation.registerComponent('ChatScreen', () => ChatScreen);
 }
